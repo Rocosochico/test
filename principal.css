@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.bar-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 9999;
+}
+.bar-up p{
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 5px 15px;
+    font-size: 12px;
+}
+.bar-up div{
+    position: absolute;
+    right: 0;
+    top: 3px;;
+}
+.bar-up div a{
+    color: #fff;
+    font-family: sans-serif;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin: 24px 0 0 0;
+    height: 100px;
+    background-color: #fff;
+}
+.header img{
+    width: 300px;
+    height: 100px;
+    margin-left: 20px;
+}
+.header ul{
+    position: relative;
+    left: 50%;
+    margin: -55px 0 0 0;
+}
+.header ul li{
+    list-style: none;
+    display: inline;
+    margin: 0px 2px;
+    font-size: 12px;
+}
+.header ul li a{
+    text-decoration: none;
+    color: #444;
+    padding: 5px 25px;
+    transition: 0.5s;
+}
+.header ul li a:hover{
+    color: dodgerblue;
+}
+.change{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    background-image: url(../img/balls.png);
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+.change .box{
+    position: relative;
+    margin: -20% auto;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 50%;
+    background-color: #fffffd;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 6px #ddd;
+    font-family: sans-serif;
+    font-size: 12px;
+    transition: 1s;
+}
+.change .box .back{
+    border-bottom: 1px solid #ddd;
+    text-align:left;
+    background-color: #fff;
+}
+.change .box .back p{
+    position: relative;
+    margin: 5px;
+    padding: 4px 5px;
+    border: 1px solid #999;
+    border-radius: 50px;
+    width: 15px;
+    text-align: center;
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.5s;
+    z-index: 99999999;
+}
+.change .box .back p:hover{
+    color: dodgerblue;
+    border-color: dodgerblue;
+}
+.change .box .back h2{
+    position: absolute;
+    top: -3px;
+    width: 100%;
+    text-align: center;
+}
+.change .box input,.change .box select{
+    position: relative;
+    margin: 15px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    display: block;
+    width: 300px;
+    height: 35px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+.change .box .cke{
+    text-align: left;
+    padding-left: 15px;
+}
+.change .box #passChg{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: 0.4s;
+}
+.change .box #passChg.showmePass{
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+}
+.change .box input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    display: inline;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+.change .box input[type="button"]{
+    background-color: #eeeeed;
+    cursor: pointer;
+    transition: 1s;
+}
+.appear{
+    opacity: 1;
+    pointer-events: all;
+}
+.appear .box{
+    margin: 10% auto;
+}
+.change .box .fail{
+    background: transparent;
+    color: #ff0000;
+    transition: 1s;
+}
+.fail::-webkit-input-placeholder{
+    color: red;
+}
+.fail::-moz-input-placeholder{
+    color: red;
+}
+.fail:-moz-input-placeholder{
+    color: red;
+}
+.fail:-ms-input-placeholder{
+    color: red;
+}
+#despues button{
+    cursor: pointer;
+}
+.change .box a{
+    display: inline;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #444;
+    margin: 10px 5px;
+    transition: 0.5s;
+}
+.change .box a:hover{
+    background-color: #ddd;
+}
+.main{
+    position: relative;
+    margin: 0 auto 0 auto;
+    top: 150px;
+    width: 80%;
+}
+@media screen and (max-width: 1340px){
+    .change .box{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 840px){
+    .change .box{
+        width: 90%;
+    }
+}
+#caps{
+    position: relative;
+    width: 20px;
+    top: -195px;
+    margin-left: -320px;
+    opacity: 0;
+    transition: 0.7s;
+    z-index: 999999;
+}
+
+@media screen and (max-width: 960px){
+    .header img{
+        width: 260px;
+        height: auto;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    .header ul{
+        margin-top: -40px;
+    }
+}
+@media screen and (max-width: 768px){
+    .header img{
+        width: 30%;
+    }
+    .header ul{
+        left: 60%;
+    }
+    .header ul li a{
+        padding: 5px 15px;
+    }
+}
